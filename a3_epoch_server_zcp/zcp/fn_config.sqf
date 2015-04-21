@@ -32,7 +32,7 @@ ZCP_MinKryptoReward = 500; // The crypto reward can never be recalculated lower 
 
 ZCP_VehicleReward = ["B_Truck_01_box_EPOCH","B_Truck_01_box_EPOCH","B_Truck_01_box_EPOCH"]; // Vehicle classes for vehicle reward
 
-ZCP_WeaponReward = [["LMG_Zafir_F",1],["Machinegun_arifle_MX_SW_F",1],["arifle_MX_SW_Black_F",1],["1911_pistol_epoch",1],["arifle_TRG21_F",1]]; // Classname + amount in an array in the reward array for weapons
+ZCP_WeaponReward = ["LMG_Zafir_F","Machinegun_arifle_MX_SW_F","arifle_MX_SW_Black_F","1911_pistol_epoch","arifle_TRG21_F"]; // Classname in an array in the reward array for weapons
 ZCP_ItemWeaponReward = [["optic_NVS",1]]; // Ammo is assigned automaticly.
 
 ZCP_BuildingReward = [['PartPlankPack',8],['KitStudWall',4],["KitFoundation",2],["KitWoodFloor",2],['KitPlotPole',1],['ItemLockbox',1],['KitShelf',1],['KitCinderWall',2],['CircuitParts',1]]; // Classname + amount in an array in the reward array for buildings
