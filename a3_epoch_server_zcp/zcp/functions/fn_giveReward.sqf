@@ -63,7 +63,7 @@ switch (_reward) do {
 		_box call ZCP_fnc_paraDrop;
 	};
 	case "WeaponBox" : {
-		private["_box","_mags","_rnd","_wpns"];
+		private["_box","_mags","_rnd","_wpns","_i"];
 		_rnd = ceil(random 5); // max Anzahl von Waffen (x - 1)
 		for _i from 1 to _rnd do {
 			_wpns set [_i-1,ZCP_WeaponReward call BIS_fnc_selectRandom]; // <-- mh?!
