@@ -63,11 +63,10 @@ switch (_reward) do {
 		_box call ZCP_fnc_paraDrop;
 	};
 	case "WeaponBox" : {
-		private["_box","_mags","_rnd","_wpns","_i"];
-		_rnd = ceil(random 5); // max Anzahl von Waffen (x - 1)
-		for _i from 1 to _rnd do {
-			_wpns set [_i-1,ZCP_WeaponReward call BIS_fnc_selectRandom]; // <-- mh?!
-			};
+		private["_box","_loadout"];
+		
+		//_loadout = ZCP_WeaponReward
+		
 		PV_ZCP_zupastic = ["ZCP",format["%2 captured %1 and received his weaponbox. The base will dismantle in %4 seconds.",_ZCP_name,name _ZCP_currentCapper,"",ZCP_BaseCleanupDelay]];
 		publicVariable "PV_ZCP_zupastic";	
 		diag_log text format ["[ZCP]: %1 won %2, received a weaponbox.",name _ZCP_currentCapper,_ZCP_name];
@@ -76,16 +75,9 @@ switch (_reward) do {
 		clearMagazineCargoGlobal _box;
 		clearBackpackCargoGlobal _box;
 		clearItemCargoGlobal _box;
-		{
-			_box addWeaponCargoGlobal [_x select 0,1];
-			_mags=getArray(configFile >> "CfgWeapons" >> (_x select 0) >> "magazines");
-			if !(_mags isEqualTo[])then{
-				_box addMagazineCargoGlobal[_mags select 0,ceil(random 5)];
-			};
-		}count _wpns;
-		{
-			_box addItemCargoGlobal [_x select 0,_x select 1];			
-		}count ZCP_ItemWeaponReward;
+		
+		[_box, ZCP_WeaponReward] call Beef_fnc_setVehicleLoadout;
+		
 		_box setDir random 360;
 		_box setPos [_capturePosition select 0,_capturePosition select 1,150];
 		_box call ZCP_fnc_paraDrop;
