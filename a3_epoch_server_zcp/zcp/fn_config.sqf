@@ -64,6 +64,7 @@ ZCP_WeaponReward = [
 			[0,"MMG_02_camo_F",0.1,1,0],
 			[0,"MMG_02_sand_F",0.1,1,0],
 			[0,"MMG_02_black_F",0.1,1,0],
+			[1,"10Rnd_93x64_DMR_05_Mag",1,5,10],
 			[2,"optic_AMS",0.5,1,0],
 			[2,"optic_AMS_khk",0.5,1,0],
 			[2,"optic_AMS_snd",0.5,1,0],
