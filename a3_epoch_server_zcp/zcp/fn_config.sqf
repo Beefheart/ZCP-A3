@@ -83,9 +83,9 @@ ZCP_StaticPoints = false; // If true, the missions will use the provided locatio
 // valid rewards -> Crypto , WeaponBox , BuildBox , Vehicle
 ZCP_CapPoints = [ // [name,[x,y,z],reward, varname,index]
 	["Cap Point Alpha",[3085.37,8775.07,0],"Crypto","alpha",0],
-	["Cap Point Bravo",[3085.37,8775.07,0],"WeaponBox","beta",1],
-	["Cap Point Charlie",[3085.37,8775.07,0],"BuildBox","charlie",2],
-	["Cap Point Delta",[3085.37,8775.07,0],"Vehicle","delta",3]
+	["Cap Point Bravo",[3085.37,8775.07,0],"Crypto","beta",1],
+	["Cap Point Charlie",[3085.37,8775.07,0],"Crypto","charlie",2],
+	["Cap Point Delta",[3085.37,8775.07,0],"Crypto","delta",3]
 ];
 
 // For every spawned mission, 

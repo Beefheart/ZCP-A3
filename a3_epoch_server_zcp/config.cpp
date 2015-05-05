@@ -27,6 +27,7 @@ class CfgFunctions {
 			class giveReward {};
 			class keepMarker {};
 			class createBase {};
+			class Reward_Crypto {};
 		};
 	};
 };
